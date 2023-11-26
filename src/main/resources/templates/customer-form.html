@@ -17,7 +17,7 @@
         </label>
         <br><br>
         <label>
-            Last Name (*)
+            Last Name (*):
             <input type="text" th:field="*{lastName}" />
         </label>
         <span
@@ -28,13 +28,22 @@
 
         <br><br>
         <label>
-            Free passes
+            Free passes:
             <input type="number" th:field="*{freePasses}" />
         </label>
         <span
             th:if="${#fields.hasErrors('freePasses')}"
             th:errors="*{freePasses}"
             class="error"></span>
+
+        <br><br>
+        <label>
+            Postal Code:
+            <input type="text" th:field="*{postalCode}" />
+        </label>
+        <span th:if="${#fields.hasErrors('postalCode')}"
+              th:errors="*{postalCode}"
+              class="error"></span>
 
         <br><br>
         <input type="submit" value="Submit" />
